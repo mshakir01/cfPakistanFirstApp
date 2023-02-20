@@ -1,3 +1,4 @@
+import 'package:first_app/season_two.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.red,
       ),
-      home:  HomePage(),
+      home:  SeasionTwoScreen(),
     );
   }
 }
