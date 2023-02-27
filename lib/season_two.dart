@@ -79,8 +79,6 @@ class _SeasionTwoScreenState extends State<SeasionTwoScreen> {
                 ),
               ],
             ),
-            
-
           ],
         ),
       ),
