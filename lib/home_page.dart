@@ -8,15 +8,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double _value = 6;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // drawer: Drawer(
+        //   child: ListView(
+        //     children: [
+        //       DrawerHeader(child: Container()),
+        //       ListTile(
+        //         title: const Text('Item 1'),
+        //         onTap: () {
+        //           // Update the state of the app.
+        //           // ...
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // ),
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios),
           title: Text("Fist App"),
         ),
         body: Column(
           children: [
+
             SizedBox(
               height: 50,
             ),
@@ -53,8 +69,7 @@ class _HomePageState extends State<HomePage> {
             ),
             TextFormField(
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  hintText: "Password"),
+                  prefixIcon: Icon(Icons.lock), hintText: "Password"),
             ),
 
             SizedBox(
@@ -98,7 +113,17 @@ class _HomePageState extends State<HomePage> {
             //   ],
             // ),
 
-            ElevatedButton(onPressed: () {}, child: Text("Button"))
+            ElevatedButton(onPressed: () {}, child: Text("Button")),
+            Slider(
+              min: 0,
+              max: 100,
+              value: _value,
+              onChanged: (value) {
+                setState(() {
+                  _value = value;
+                });
+              },
+            ),
           ],
         ));
   }

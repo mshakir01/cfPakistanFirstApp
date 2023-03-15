@@ -1,7 +1,8 @@
-import 'package:first_app/practice.dart';
+import 'package:first_app/practice/bottom_navigatoin.dart';
 import 'package:first_app/seasion_five.dart';
 import 'package:first_app/season_two.dart';
 import 'package:flutter/material.dart';
+import 'five_seasion.dart';
 import 'fourthSeasion.dart';
 import 'home_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  FifthSeasion(),
+      home:  FiveSeasionScreen(),
     );
   }
 }
