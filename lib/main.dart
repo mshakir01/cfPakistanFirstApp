@@ -1,15 +1,17 @@
-import 'package:first_app/practice/bottom_navigatoin.dart';
-import 'package:first_app/practice/tab_bar.dart';
-import 'package:first_app/seasion_five.dart';
-import 'package:first_app/season_two.dart';
-import 'package:first_app/third_month/tabbar_screen.dart';
+import 'package:first_app/third_month/stack_screen.dart';
 import 'package:flutter/material.dart';
-import 'five_seasion.dart';
-import 'fourthSeasion.dart';
-import 'home_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      ScreenUtilInit(
+          designSize:const Size(360, 800),
+          splitScreenMode: true,
+          minTextAdapt: true,
+          builder: (BuildContext context,Widget? child) {
+        return MyApp();
+      }));
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  TabBarDropDownScreen(),
+      home: const StackScreen(),
     );
   }
 }
